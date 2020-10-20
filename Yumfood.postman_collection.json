@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "c9caa85e-4030-4cc7-a1c6-f65c466eaa5d",
+		"name": "Yumfood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tags_new\" : [\r\n        {\r\n            \"id_tag\" : 13,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 2,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 1,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 3,\r\n            \"qty\" : 2\r\n        }\r\n    ],\r\n    \"notes\": \"Nasi goreng pedes nya sedeng aja\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/detail/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"detail",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/list/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order All List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tags_array\" : [\r\n        {\r\n            \"id_tag\" : 13,\r\n            \"qty\" : 8\r\n        },\r\n        {\r\n            \"id_tag\" : 2,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 1,\r\n            \"qty\" : 4\r\n        },\r\n        {\r\n            \"id_tag\" : 3,\r\n            \"qty\" : 6\r\n        }\r\n    ],\r\n    \"notes\": \"Nasi gorengnya telornya di dadarnya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list Vendors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tags_array\" : [\r\n        {\r\n            \"id_tag\" : 13,\r\n            \"qty\" : 8\r\n        },\r\n        {\r\n            \"id_tag\" : 2,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 1,\r\n            \"qty\" : 4\r\n        },\r\n        {\r\n            \"id_tag\" : 3,\r\n            \"qty\" : 6\r\n        }\r\n    ],\r\n    \"notes\": \"Nasi gorengnya telornya di dadarnya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Vendors id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tags_array\" : [\r\n        {\r\n            \"id_tag\" : 13,\r\n            \"qty\" : 8\r\n        },\r\n        {\r\n            \"id_tag\" : 2,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 1,\r\n            \"qty\" : 4\r\n        },\r\n        {\r\n            \"id_tag\" : 3,\r\n            \"qty\" : 6\r\n        }\r\n    ],\r\n    \"notes\": \"Nasi gorengnya telornya di dadarnya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/vendors/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"vendors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Vendors ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Indonesia Restaurant",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/vendors/59",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"vendors",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Created Vendors ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Merah Putih Restaurant",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleted Vendors",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tags_array\" : [\r\n        {\r\n            \"id_tag\" : 13,\r\n            \"qty\" : 8\r\n        },\r\n        {\r\n            \"id_tag\" : 2,\r\n            \"qty\" : 1\r\n        },\r\n        {\r\n            \"id_tag\" : 1,\r\n            \"qty\" : 4\r\n        },\r\n        {\r\n            \"id_tag\" : 3,\r\n            \"qty\" : 6\r\n        }\r\n    ],\r\n    \"notes\": \"Nasi gorengnya telornya di dadarnya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/vendors/61",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"vendors",
+						"61"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
