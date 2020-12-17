@@ -15,10 +15,16 @@ class VendorController extends Controller
      *
      * @return AnonymousResourceCollection
      */
-    public function index()
+    public function index(Request $request)
     {
-      return VendorResource::collection(Vendor::paginate());
-  }
+        $tags = $request->tags;
+
+        if (!empty($tags) && count($tags) > 0) {
+            return Vendor::with('tags')->where('name', $tags)->get();
+        }
+
+        return VendorResource::collection(Vendor::paginate(), $tags);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -33,9 +39,9 @@ class VendorController extends Controller
         $data_vendor->save();
 
         return response()->json([
-              'message' => 'Vendors records created', 
-              'data' => $data_vendor
-          ], 201);
+          'message' => 'Vendors records created', 
+          'data' => $data_vendor
+      ], 201);
     }
 
     /**
@@ -70,7 +76,7 @@ class VendorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $data_vendor = Vendor::find($id);
         $data_vendor->name = $request->name;
         $data_vendor->save();
